@@ -1,0 +1,151 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Tool - Link & IP Analyzer</title>
+    <style>
+        body { font-family: Arial; margin: 40px; background-color: #f2f2f2; }
+        h2 { color: #333; }
+        form { background: white; padding: 20px; border-radius: 10px; width: 500px; }
+        textarea { width: 100%; height: 300px; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>🔐 Cyber Tool - Link Analyzer & IP Tracker</h2>
+    <form method="POST" action="/analyze">
+        <label>🔗 Enter a URL:</label><br>
+        <input type="text" name="url" style="width:100%; padding:8px;"><br><br>
+        <label>🌍 Enter an IP address:</label><br>
+        <input type="text" name="ip" style="width:100%; padding:8px;"><br><br>
+        <button type="submit" style="padding:10px 20px;">Analyze</button>
+    </form>
+
+    {% if result %}
+    <h3>🔎 Result:</h3>
+    <div style="background:white; padding:15px; border-radius:10px;">
+        {{ result | safe }}
+    </div>
+    {% endif %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Link & IP Analyzer</title>
+    <style>
+        /* হ্যাকার স্টাইল বডি */
+        body {
+            background-color: #0f0f0f;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 40px auto;
+            max-width: 600px;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00ff00;
+            text-shadow: 0 0 5px #0f0;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        form {
+            background-color: #111;
+            border: 2px solid #00ff00;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #0f0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #222;
+            border: 1px solid #00ff00;
+            border-radius: 4px;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]::placeholder {
+            color: #007700;
+        }
+
+        button {
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 12px 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+            letter-spacing: 1.5px;
+        }
+
+        button:hover {
+            background-color: #00cc00;
+        }
+
+        /* Result box */
+        .result-box {
+            margin-top: 30px;
+            background-color: #111;
+            border: 1px solid #00ff00;
+            border-radius: 6px;
+            padding: 20px;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            box-shadow: 0 0 10px #0f0;
+            color: #00ff00;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>🔐Link Analyzer & IP Tracker</h2>
+    <form method="POST" action="/analyze" autocomplete="off">
+        <label>🔗 Enter a URL:</label>
+        <input type="text" name="url" placeholder="example.com or https://example.com" />
+
+        <label>🌍 Enter an IP address:</label>
+        <input type="text" name="ip" placeholder="8.8.8.8 or 192.168.1.1" />
+
+        <button type="submit">ANALYZE</button>
+    </form>
+
+    {% if result %}
+    <div class="result-box">
+        {{ result | safe }}
+    </div>
+    {% endif %}
+</body>
+</html>
